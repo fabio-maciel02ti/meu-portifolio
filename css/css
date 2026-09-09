@@ -183,7 +183,7 @@ a {
 
 .main-button:hover {
     transform: translateY(-4px);
-    background: #a94723;
+    background: #0717f7;
 }
 
 .main-button span {
@@ -263,7 +263,7 @@ a {
 }
 
 .section h2 em {
-    color: #c95c32;
+    color: #0d7eff;
     font-style: normal;
 }
 
@@ -336,7 +336,7 @@ a {
 
 .project-card span {
     font-size: 12px;
-    color: #c95c32;
+    color: #0856ff;
     font-weight: 700;
 }
 
@@ -436,7 +436,7 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
 
-    border-top: 5px solid #c95c32;
+    border-top: 5px solid #0e0aff;
 }
 
 .footer-name {
