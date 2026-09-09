@@ -1,26 +1,25 @@
-// ================================
-// PORTFÓLIO FÁBIO MACIEL
-// ================================
+// ========================================
+// PORTFÓLIO - FÁBIO MACIEL
+// ========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    console.log("Portfólio carregado com sucesso!");
-
     // Seleciona todos os links do menu
-    const links = document.querySelectorAll("nav a");
+    const links = document.querySelectorAll(".menu a");
+
 
     // Rolagem suave
-    links.forEach(link => {
+    links.forEach((link) => {
 
-        link.addEventListener("click", function(event) {
+        link.addEventListener("click", (evento) => {
 
             const destino = document.querySelector(
-                this.getAttribute("href")
+                link.getAttribute("href")
             );
 
             if (destino) {
 
-                event.preventDefault();
+                evento.preventDefault();
 
                 destino.scrollIntoView({
                     behavior: "smooth"
@@ -33,31 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Animação das seções
-    const secoes = document.querySelectorAll("section");
-
-    const observador = new IntersectionObserver(
-        (entradas) => {
-
-            entradas.forEach(entrada => {
-
-                if (entrada.isIntersecting) {
-
-                    entrada.target.classList.add("visivel");
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
+    // Mensagem no console
+    console.log(
+        "Portfólio de Fábio Maciel carregado com sucesso!"
     );
-
-
-    secoes.forEach(secao => {
-        observador.observe(secao);
-    });
 
 });

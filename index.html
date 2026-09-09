@@ -5,35 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="Portfólio pessoal de Fábio Maciel, estudante de Técnico em Informática.">
+
     <title>Fábio Maciel | Portfólio</title>
 
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- MENU -->
+    <!-- CABEÇALHO -->
     <header class="header">
-        <div class="logo">Fábio<span>.</span></div>
 
-        <nav>
+        <a href="#inicio" class="logo">
+            Fábio<span>.</span>
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
             <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
+            <a href="#sobre">Sobre mim</a>
             <a href="#projetos">Projetos</a>
             <a href="#habilidades">Habilidades</a>
             <a href="#contato">Contato</a>
         </nav>
+
     </header>
 
 
-    <!-- PÁGINA INICIAL -->
     <main>
+
+        <!-- ==============================
+             INÍCIO
+        =============================== -->
 
         <section id="inicio" class="hero">
 
-            <div class="hero-text">
+            <div class="hero-conteudo">
 
-                <p class="pequeno-texto">
+                <p class="saudacao">
                     OLÁ, EU SOU
                 </p>
 
@@ -45,19 +64,19 @@
                     Técnico em Informática
                 </h2>
 
-                <p class="descricao">
-                    Sou estudante da área de tecnologia, apaixonado por
-                    aprender e criar soluções através da informática,
-                    programação e desenvolvimento web.
+                <p class="hero-texto">
+                    Sou estudante da área de tecnologia, gosto de aprender,
+                    criar projetos e transformar ideias em soluções através
+                    da informática.
                 </p>
 
-                <div class="botoes">
+                <div class="hero-botoes">
 
-                    <a href="#sobre" class="botao principal">
+                    <a href="#sobre" class="botao botao-destaque">
                         Mais sobre mim
                     </a>
 
-                    <a href="#projetos" class="botao secundario">
+                    <a href="#projetos" class="botao botao-outline">
                         Ver projetos
                     </a>
 
@@ -66,91 +85,132 @@
             </div>
 
 
-            <div class="hero-card">
+            <!-- FOTO DE PERFIL -->
 
-                <div class="icone">
-                    💻
+            <div class="perfil-card">
+
+                <img
+                    src="img/foto-perfil.jpg"
+                    alt="Foto de perfil de Fábio Maciel">
+
+                <div class="perfil-info">
+
+                    <strong>
+                        Fábio Maciel
+                    </strong>
+
+                    <span>
+                        Turma 302 • Técnico em Informática
+                    </span>
+
                 </div>
-
-                <h3>
-                    Tecnologia & Criatividade
-                </h3>
-
-                <p>
-                    Transformando ideias em projetos
-                    através da tecnologia.
-                </p>
 
             </div>
 
         </section>
 
 
-        <!-- SOBRE MIM -->
-        <section id="sobre" class="sobre">
+        <!-- ==============================
+             SOBRE MIM
+        =============================== -->
 
-            <div class="titulo-secao">
+        <section id="sobre" class="secao sobre">
+
+            <div class="titulo">
+
                 <p>SOBRE MIM</p>
-                <h2>Conheça um pouco mais sobre mim</h2>
+
+                <h2>
+                    Conheça um pouco mais sobre mim
+                </h2>
+
             </div>
 
-            <div class="sobre-conteudo">
 
-                <div class="sobre-texto">
+            <div class="sobre-grid">
+
+                <!-- QUEM SOU -->
+
+                <article class="sobre-card">
+
+                    <div class="card-icone">
+                        👨‍💻
+                    </div>
 
                     <h3>
-                        Quem sou eu?
+                        Quem sou
                     </h3>
 
                     <p>
-                        Meu nome é Fábio Maciel e sou estudante de
-                        Técnico em Informática. Tenho interesse em
-                        tecnologia, programação e desenvolvimento de
-                        projetos digitais.
+                        Meu nome é Fábio Maciel e sou estudante da
+                        turma 302 de Técnico em Informática.
                     </p>
 
                     <p>
-                        Durante minha formação, busco aprender novas
-                        ferramentas e desenvolver projetos que possam
-                        transformar ideias em soluções úteis.
+                        Tenho interesse por tecnologia, programação,
+                        desenvolvimento de sites e criação de
+                        projetos digitais.
                     </p>
 
+                </article>
+
+
+                <!-- GASTRONOMIA -->
+
+                <article class="sobre-card gastronomia-card">
+
+                    <img
+                        src="img/gastronomia.jpg"
+                        alt="Bolo de chocolate preparado em casa">
+
+                    <div class="card-icone">
+                        🍳
+                    </div>
+
                     <h3>
-                        🍳 Meu interesse por gastronomia
+                        Gastronomia
                     </h3>
 
                     <p>
                         Além da tecnologia, também gosto de gastronomia.
-                        Tenho interesse em conhecer diferentes receitas,
-                        ingredientes e maneiras de preparar alimentos.
+                        Tenho interesse em receitas, ingredientes e
+                        diferentes formas de preparar alimentos.
                     </p>
 
                     <p>
-                        A gastronomia é uma área que considero muito
-                        criativa, assim como a tecnologia, pois permite
-                        experimentar, aprender e criar coisas novas.
+                        Para mim, a gastronomia é uma forma de criatividade
+                        e aprendizado, assim como a tecnologia.
                     </p>
 
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- PROJETOS -->
-        <section id="projetos" class="projetos">
+        <!-- ==============================
+             PROJETOS
+        =============================== -->
 
-            <div class="titulo-secao">
+        <section id="projetos" class="secao projetos">
+
+            <div class="titulo">
+
                 <p>PORTFÓLIO</p>
-                <h2>Meus projetos</h2>
+
+                <h2>
+                    Meus projetos
+                </h2>
+
             </div>
 
-            <div class="projetos-container">
 
-                <article class="projeto">
+            <div class="projetos-grid">
 
-                    <div class="projeto-icone">
+                <article class="projeto-card">
+
+                    <div class="projeto-topo">
                         🌐
                     </div>
 
@@ -159,20 +219,28 @@
                     </h3>
 
                     <p>
-                        Projeto desenvolvido utilizando tecnologias
-                        de desenvolvimento web.
+                        Projeto desenvolvido durante minha formação,
+                        utilizando tecnologias de desenvolvimento web.
                     </p>
 
-                    <span>
-                        HTML • CSS • JavaScript
-                    </span>
+                    <div class="tecnologias">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+
+                    </div>
+
+                    <a href="#" class="projeto-link">
+                        Ver projeto →
+                    </a>
 
                 </article>
 
 
-                <article class="projeto">
+                <article class="projeto-card">
 
-                    <div class="projeto-icone">
+                    <div class="projeto-topo">
                         💻
                     </div>
 
@@ -181,20 +249,28 @@
                     </h3>
 
                     <p>
-                        Projeto desenvolvido durante minha formação
-                        em Técnico em Informática.
+                        Projeto escolar criado para colocar em prática
+                        os conhecimentos adquiridos no curso.
                     </p>
 
-                    <span>
-                        Tecnologia • Programação
-                    </span>
+                    <div class="tecnologias">
+
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Programação</span>
+
+                    </div>
+
+                    <a href="#" class="projeto-link">
+                        Ver projeto →
+                    </a>
 
                 </article>
 
 
-                <article class="projeto">
+                <article class="projeto-card">
 
-                    <div class="projeto-icone">
+                    <div class="projeto-topo">
                         🚀
                     </div>
 
@@ -203,13 +279,15 @@
                     </h3>
 
                     <p>
-                        Espaço reservado para apresentar um novo
-                        projeto desenvolvido por mim.
+                        Espaço reservado para novos projetos que serão
+                        desenvolvidos durante minha formação.
                     </p>
 
-                    <span>
-                        Em desenvolvimento
-                    </span>
+                    <div class="tecnologias">
+
+                        <span>Em breve</span>
+
+                    </div>
 
                 </article>
 
@@ -218,38 +296,53 @@
         </section>
 
 
-        <!-- HABILIDADES -->
-        <section id="habilidades" class="habilidades">
+        <!-- ==============================
+             HABILIDADES
+        =============================== -->
 
-            <div class="titulo-secao">
+        <section id="habilidades" class="secao habilidades">
+
+            <div class="titulo">
+
                 <p>CONHECIMENTOS</p>
-                <h2>Habilidades</h2>
+
+                <h2>
+                    Tecnologias e habilidades
+                </h2>
+
             </div>
 
-            <div class="habilidades-container">
+
+            <div class="habilidades-grid">
 
                 <div class="habilidade">
-                    HTML5
+                    <strong>HTML5</strong>
+                    <span>Desenvolvimento Web</span>
                 </div>
 
                 <div class="habilidade">
-                    CSS3
+                    <strong>CSS3</strong>
+                    <span>Estilização</span>
                 </div>
 
                 <div class="habilidade">
-                    JavaScript
+                    <strong>JavaScript</strong>
+                    <span>Interatividade</span>
                 </div>
 
                 <div class="habilidade">
-                    Git
+                    <strong>Git</strong>
+                    <span>Versionamento</span>
                 </div>
 
                 <div class="habilidade">
-                    GitHub
+                    <strong>GitHub</strong>
+                    <span>Projetos e repositórios</span>
                 </div>
 
                 <div class="habilidade">
-                    VS Code
+                    <strong>VS Code</strong>
+                    <span>Editor de código</span>
                 </div>
 
             </div>
@@ -257,26 +350,34 @@
         </section>
 
 
-        <!-- CONTATO -->
-        <section id="contato" class="contato">
+        <!-- ==============================
+             CONTATO
+        =============================== -->
 
-            <div class="titulo-secao">
+        <section id="contato" class="secao contato">
+
+            <div class="titulo">
+
                 <p>CONTATO</p>
-                <h2>Vamos conversar?</h2>
+
+                <h2>
+                    Vamos nos conectar?
+                </h2>
+
             </div>
 
-            <p>
-                Você pode acompanhar meus projetos e entrar em
-                contato através das minhas redes.
+            <p class="contato-texto">
+                Conheça meus projetos e acompanhe minha evolução
+                na área de tecnologia.
             </p>
 
-            <div class="botoes">
+            <div class="contato-botoes">
 
-                <a href="#" class="botao principal">
+                <a href="#" class="botao botao-destaque">
                     GitHub
                 </a>
 
-                <a href="#" class="botao secundario">
+                <a href="#" class="botao botao-outline">
                     LinkedIn
                 </a>
 
@@ -287,16 +388,24 @@
     </main>
 
 
-    <!-- RODAPÉ -->
-    <footer>
+    <!-- ==============================
+         RODAPÉ
+    =============================== -->
+
+    <footer class="footer">
 
         <p>
-            © 2026 Fábio Maciel. Todos os direitos reservados.
+            © 2026 Fábio Maciel
+        </p>
+
+        <p>
+            Turma 302 — Técnico em Informática
         </p>
 
     </footer>
 
 
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>
