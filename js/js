@@ -1,40 +1,17 @@
-// ========================================
-// PORTFÓLIO - FÁBIO MACIEL
-// ========================================
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.querySelector(".nav");
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    // Seleciona todos os links do menu
-    const links = document.querySelectorAll(".menu a");
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active");
+});
 
 
-    // Rolagem suave
-    links.forEach((link) => {
+const links = document.querySelectorAll(".nav a");
 
-        link.addEventListener("click", (evento) => {
+links.forEach(link => {
 
-            const destino = document.querySelector(
-                link.getAttribute("href")
-            );
-
-            if (destino) {
-
-                evento.preventDefault();
-
-                destino.scrollIntoView({
-                    behavior: "smooth"
-                });
-
-            }
-
-        });
-
+    link.addEventListener("click", () => {
+        nav.classList.remove("active");
     });
-
-
-    // Mensagem no console
-    console.log(
-        "Portfólio de Fábio Maciel carregado com sucesso!"
-    );
 
 });

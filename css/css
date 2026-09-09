@@ -1,31 +1,6 @@
-/* =========================================
-   VARIÁVEIS
-========================================= */
-
-:root {
-
-    /* 60% - cor dominante */
-    --fundo: #f5f7fa;
-    --branco: #ffffff;
-
-    /* 30% - cor secundária */
-    --azul-escuro: #123c69;
-    --azul: #1d5f9e;
-
-    /* 10% - cor de destaque */
-    --destaque: #f28c28;
-
-    --texto: #172033;
-    --texto-suave: #59687a;
-    --borda: #e1e6ec;
-
-    --sombra: 0 15px 40px rgba(18, 60, 105, 0.10);
-}
-
-
-/* =========================================
-   RESET
-========================================= */
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
 
 * {
     margin: 0;
@@ -33,750 +8,553 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family: "Roboto", sans-serif;
-    background: var(--fundo);
-    color: var(--texto);
+    background: #f4f0e8;
+    color: #20201d;
+    font-family: "DM Sans", sans-serif;
     line-height: 1.6;
 }
 
-
-h1,
-h2,
-h3 {
-    font-family: "Poppins", sans-serif;
+img {
+    width: 100%;
+    display: block;
 }
 
-
 a {
+    color: inherit;
     text-decoration: none;
 }
 
 
-/* =========================================
+/* =========================
    CABEÇALHO
-========================================= */
+========================= */
 
 .header {
+    width: 100%;
+    padding: 28px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     position: sticky;
     top: 0;
+    z-index: 100;
 
-    z-index: 1000;
+    background: rgba(244, 240, 232, 0.94);
+    backdrop-filter: blur(10px);
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 8%;
-
-    background: rgba(255, 255, 255, 0.97);
-
-    border-bottom: 1px solid var(--borda);
+    border-bottom: 1px solid rgba(32, 32, 29, 0.12);
 }
-
 
 .logo {
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 28px;
-
+    font-size: 17px;
     font-weight: 700;
-
-    color: var(--azul-escuro);
+    line-height: 0.95;
+    letter-spacing: 1px;
 }
 
-
-.logo span {
-    color: var(--destaque);
-}
-
-
-.menu {
-
+.nav {
     display: flex;
-
-    gap: 28px;
+    gap: 35px;
 }
 
+.nav a {
+    font-size: 14px;
+    position: relative;
+}
 
-.menu a {
+.nav a::after {
+    content: "";
+    width: 0;
+    height: 1px;
 
-    color: var(--texto);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
 
-    font-weight: 500;
+    background: #c95c32;
 
     transition: 0.3s;
 }
 
+.nav a:hover::after {
+    width: 100%;
+}
 
-.menu a:hover {
-    color: var(--azul);
+.menu-btn {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 25px;
+    cursor: pointer;
 }
 
 
-/* =========================================
+/* =========================
    HERO
-========================================= */
+========================= */
 
 .hero {
+    min-height: 90vh;
+    padding: 80px 6%;
 
-    min-height: 88vh;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 8%;
 
     align-items: center;
-
-    justify-content: space-between;
-
-    gap: 60px;
-
-    padding: 80px 10%;
 }
 
-
-.hero-conteudo {
-    max-width: 650px;
+.hero-text {
+    max-width: 700px;
 }
 
-
-.saudacao {
-
-    color: var(--azul);
-
-    font-size: 14px;
-
+.small-title {
+    font-size: 12px;
     font-weight: 700;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
 }
-
 
 .hero h1 {
-
-    font-size: clamp(48px, 7vw, 78px);
-
-    line-height: 1.1;
-
-    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(65px, 9vw, 130px);
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: -5px;
 }
-
 
 .hero h1 span {
-    color: var(--azul);
-}
-
-
-.hero h2 {
-
-    font-size: 28px;
-
-    color: var(--texto-suave);
-
-    margin-bottom: 20px;
-}
-
-
-.hero-texto {
-
-    max-width: 600px;
-
-    font-size: 18px;
-
-    color: var(--texto-suave);
-}
-
-
-/* =========================================
-   BOTÕES
-========================================= */
-
-.hero-botoes,
-.contato-botoes {
-
-    display: flex;
-
-    gap: 15px;
-
-    margin-top: 30px;
-
-    flex-wrap: wrap;
-}
-
-
-.botao {
-
-    display: inline-block;
-
-    padding: 13px 25px;
-
-    border-radius: 8px;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-
-/* Botão principal */
-
-.botao-destaque {
-
-    background: var(--destaque);
-
-    color: #ffffff;
-}
-
-
-.botao-destaque:hover {
-
-    transform: translateY(-3px);
-
-    filter: brightness(0.92);
-}
-
-
-/* Botão secundário */
-
-.botao-outline {
-
-    border: 2px solid var(--azul-escuro);
-
-    color: var(--azul-escuro);
-
-    background: transparent;
-}
-
-
-.botao-outline:hover {
-
-    background: var(--azul-escuro);
-
-    color: #ffffff;
-}
-
-
-/* =========================================
-   FOTO DE PERFIL
-========================================= */
-
-.perfil-card {
-
-    width: 340px;
-
-    padding: 18px;
-
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 20px;
-
-    box-shadow: var(--sombra);
-
-    transition: 0.3s;
-}
-
-
-.perfil-card:hover {
-
-    transform: translateY(-8px);
-}
-
-
-.perfil-card img {
-
-    width: 100%;
-
-    height: 390px;
-
-    object-fit: cover;
-
-    object-position: center 35%;
-
-    border-radius: 14px;
-
     display: block;
+    color: #c95c32;
 }
 
+.hero-description {
+    max-width: 450px;
+    margin-top: 40px;
 
-.perfil-info {
-
-    padding: 16px 5px 5px;
+    font-size: 17px;
+    color: #55544e;
 }
 
+.main-button {
+    display: inline-flex;
+    gap: 25px;
+    align-items: center;
 
-.perfil-info strong,
-.perfil-info span {
+    margin-top: 35px;
+    padding: 15px 22px;
 
-    display: block;
-}
-
-
-.perfil-info strong {
-
-    color: var(--azul-escuro);
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 20px;
-}
-
-
-.perfil-info span {
-
-    color: var(--texto-suave);
+    background: #c95c32;
+    color: white;
 
     font-size: 14px;
-}
-
-
-/* =========================================
-   SEÇÕES
-========================================= */
-
-.secao {
-
-    padding: 100px 10%;
-}
-
-
-.titulo {
-
-    text-align: center;
-
-    max-width: 700px;
-
-    margin: 0 auto 55px;
-}
-
-
-.titulo p {
-
-    color: var(--azul);
-
-    font-size: 14px;
-
     font-weight: 700;
 
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    transform: translateY(-4px);
+    background: #a94723;
+}
+
+.main-button span {
+    font-size: 18px;
+}
+
+
+/* FOTO PRINCIPAL */
+
+.hero-image {
+    position: relative;
+    max-width: 500px;
+    justify-self: end;
+}
+
+.hero-image img {
+    height: 650px;
+    object-fit: cover;
+    filter: grayscale(8%);
+}
+
+.image-label {
+    position: absolute;
+    z-index: 2;
+
+    top: 20px;
+    left: -25px;
+
+    padding: 10px 15px;
+
+    background: #20201d;
+    color: white;
+
+    font-size: 11px;
     letter-spacing: 2px;
 }
 
 
-.titulo h2 {
+/* =========================
+   SEÇÕES
+========================= */
 
-    font-size: 40px;
+.section {
+    padding: 140px 6%;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 40px;
 
-    color: var(--azul-escuro);
+    border-top: 1px solid rgba(32, 32, 29, 0.15);
+}
 
-    margin-top: 5px;
+.section-number {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #77756e;
+}
+
+.about-content,
+.projects-content,
+.skills-content,
+.contact-content {
+    max-width: 1100px;
+}
+
+.section h2 {
+    max-width: 900px;
+
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 6vw, 85px);
+
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -3px;
+
+    margin-bottom: 60px;
+}
+
+.section h2 em {
+    color: #c95c32;
+    font-style: normal;
+}
+
+.about-content > p:not(.small-title) {
+    max-width: 750px;
+    font-size: 20px;
+    color: #55544e;
+    margin-bottom: 20px;
 }
 
 
-/* =========================================
-   SOBRE MIM
-========================================= */
+/* =========================
+   FRASE
+========================= */
 
-.sobre {
+.statement {
+    min-height: 60vh;
 
-    background: var(--branco);
+    padding: 100px 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #20201d;
+    color: #f4f0e8;
 }
 
-
-.sobre-grid {
-
+.statement p {
     max-width: 1000px;
 
-    margin: auto;
+    text-align: center;
 
-    display: grid;
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 7vw, 100px);
 
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 25px;
+    line-height: 1;
 }
 
 
-.sobre-card {
+/* =========================
+   PROJETOS
+========================= */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    min-height: 300px;
 
     padding: 35px;
 
-    border: 1px solid var(--borda);
-
-    border-radius: 15px;
-
-    background: var(--fundo);
-
-    transition: 0.3s;
-}
-
-
-.sobre-card:hover {
-
-    transform: translateY(-5px);
-
-    box-shadow: var(--sombra);
-}
-
-
-.card-icone {
-
-    font-size: 45px;
-
-    margin-bottom: 15px;
-}
-
-
-.sobre-card h3 {
-
-    color: var(--azul-escuro);
-
-    font-size: 24px;
-
-    margin-bottom: 15px;
-}
-
-
-.sobre-card p {
-
-    color: var(--texto-suave);
-
-    margin-bottom: 12px;
-}
-
-
-/* FOTO DA GASTRONOMIA */
-
-.gastronomia-card {
-    overflow: hidden;
-}
-
-
-.gastronomia-card img {
-
-    width: 100%;
-
-    height: 230px;
-
-    object-fit: cover;
-
-    border-radius: 12px;
-
-    margin-bottom: 20px;
-
-    display: block;
-}
-
-
-/* =========================================
-   PROJETOS
-========================================= */
-
-.projetos-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 25px;
-}
-
-
-.projeto-card {
-
-    background: var(--branco);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 15px;
-
-    padding: 30px;
-
-    transition: 0.3s;
-}
-
-
-.projeto-card:hover {
-
-    transform: translateY(-8px);
-
-    box-shadow: var(--sombra);
-}
-
-
-.projeto-topo {
-
-    font-size: 45px;
-
-    margin-bottom: 15px;
-}
-
-
-.projeto-card h3 {
-
-    color: var(--azul-escuro);
-
-    margin-bottom: 10px;
-}
-
-
-.projeto-card p {
-
-    color: var(--texto-suave);
-
-    margin-bottom: 20px;
-}
-
-
-.tecnologias {
+    border: 1px solid rgba(32, 32, 29, 0.2);
 
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-bottom: 20px;
+    transition: 0.3s;
 }
 
-
-.tecnologias span {
-
-    background: #eaf1f8;
-
-    color: var(--azul-escuro);
-
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    font-size: 13px;
+.project-card:hover {
+    background: #20201d;
+    color: #f4f0e8;
+    transform: translateY(-7px);
 }
 
-
-.projeto-link {
-
-    color: var(--azul);
-
+.project-card span {
+    font-size: 12px;
+    color: #c95c32;
     font-weight: 700;
 }
 
+.project-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    font-weight: 500;
+}
 
-/* =========================================
-   HABILIDADES
-========================================= */
+.project-card p {
+    color: #77756e;
+}
 
-.habilidades {
-
-    background: var(--branco);
+.project-card:hover p {
+    color: #c9c6bd;
 }
 
 
-.habilidades-grid {
+/* =========================
+   GASTRONOMIA
+========================= */
 
-    max-width: 1000px;
-
-    margin: auto;
-
+.gastronomy-content {
     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
 
+    align-items: center;
+}
+
+.gastronomy-image img {
+    height: 600px;
+    object-fit: cover;
+}
+
+.gastronomy-text {
+    max-width: 550px;
+}
+
+.gastronomy-text h2 {
+    margin-bottom: 35px;
+}
+
+.gastronomy-text p:not(.small-title) {
+    color: #55544e;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.skills-list {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
 
-    gap: 18px;
+.skills-list div {
+    padding: 30px 0;
+
+    border-top: 1px solid rgba(32, 32, 29, 0.2);
+
+    font-family: "Playfair Display", serif;
+    font-size: 28px;
 }
 
 
-.habilidade {
-
-    padding: 25px;
-
-    background: var(--fundo);
-
-    border: 1px solid var(--borda);
-
-    border-radius: 12px;
-
-    text-align: center;
-}
-
-
-.habilidade strong {
-
-    display: block;
-
-    color: var(--azul-escuro);
-
-    font-family: "Poppins", sans-serif;
-
-    font-size: 20px;
-}
-
-
-.habilidade span {
-
-    color: var(--texto-suave);
-
-    font-size: 14px;
-}
-
-
-/* =========================================
+/* =========================
    CONTATO
-========================================= */
+========================= */
 
-.contato {
-
-    text-align: center;
+.contact {
+    min-height: 80vh;
+    align-items: center;
 }
 
-
-.contato-botoes {
-
-    justify-content: center;
-}
-
-
-.contato-texto {
-
-    color: var(--texto-suave);
-
+.contact-content > p:not(.small-title) {
+    max-width: 600px;
+    color: #55544e;
     font-size: 18px;
 }
 
 
-/* =========================================
+/* =========================
    RODAPÉ
-========================================= */
+========================= */
 
-.footer {
+footer {
+    padding: 60px 6%;
 
-    padding: 25px;
+    background: #20201d;
+    color: #f4f0e8;
 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+
+    border-top: 5px solid #c95c32;
+}
+
+.footer-name {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+}
+
+.footer-info {
     text-align: center;
+    font-size: 14px;
+}
 
-    background: var(--azul-escuro);
-
-    color: #ffffff;
+.footer-copy {
+    text-align: right;
+    font-size: 13px;
+    color: #aaa79f;
 }
 
 
-.footer p {
-    margin: 3px;
-}
-
-
-/* =========================================
+/* =========================
    RESPONSIVIDADE
-========================================= */
+========================= */
 
 @media (max-width: 900px) {
 
-    .header {
-        padding: 18px 5%;
-    }
+    .nav {
+        display: none;
 
-    .hero {
-
-        padding: 70px 7%;
-
-        flex-direction: column;
-
-        text-align: center;
-    }
-
-    .hero-botoes {
-        justify-content: center;
-    }
-
-    .perfil-card {
+        position: absolute;
+        top: 80px;
+        left: 0;
 
         width: 100%;
 
-        max-width: 360px;
+        padding: 30px;
+
+        background: #f4f0e8;
+
+        flex-direction: column;
+        text-align: center;
     }
 
-    .secao {
-        padding: 80px 7%;
+    .nav.active {
+        display: flex;
     }
 
-    .projetos-grid {
+    .menu-btn {
+        display: block;
+    }
 
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 60px;
+    }
+
+    .hero-image {
+        justify-self: center;
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 500px;
+    }
+
+    .section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gastronomy-content {
+        grid-template-columns: 1fr;
+    }
+
+    .gastronomy-image img {
+        height: 450px;
+    }
+
+    .skills-list {
         grid-template-columns: 1fr 1fr;
     }
 
-    .habilidades-grid {
+    footer {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        text-align: center;
+    }
 
-        grid-template-columns: 1fr 1fr;
+    .footer-info,
+    .footer-copy {
+        text-align: center;
     }
 }
 
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
 
     .header {
-
-        flex-direction: column;
-
-        gap: 15px;
-    }
-
-    .menu {
-
-        gap: 15px;
-
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-
-    .menu a {
-        font-size: 14px;
+        padding: 22px 5%;
     }
 
     .hero {
-
-        min-height: auto;
-
-        padding: 70px 6%;
+        padding: 50px 5%;
     }
 
     .hero h1 {
-        font-size: 48px;
+        font-size: 65px;
+        letter-spacing: -3px;
     }
 
-    .hero h2 {
-        font-size: 22px;
-    }
-
-    .hero-texto {
+    .hero-description {
         font-size: 16px;
     }
 
-    .sobre-grid,
-    .projetos-grid,
-    .habilidades-grid {
+    .section {
+        padding: 90px 5%;
+    }
 
+    .section h2 {
+        font-size: 50px;
+        letter-spacing: -2px;
+    }
+
+    .statement {
+        min-height: 45vh;
+        padding: 70px 5%;
+    }
+
+    .statement p {
+        font-size: 48px;
+    }
+
+    .skills-list {
         grid-template-columns: 1fr;
     }
 
-    .titulo h2 {
-        font-size: 30px;
-    }
-
-    .secao {
-        padding: 70px 6%;
-    }
-
-    .perfil-card img {
-        height: 430px;
+    .gastronomy-image img {
+        height: 350px;
     }
 }
