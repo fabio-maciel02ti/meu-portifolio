@@ -90,8 +90,30 @@ a {
     display: none;
     border: none;
     background: transparent;
-    font-size: 25px;
     cursor: pointer;
+    padding: 8px;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #20201d;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-btn.active span:first-child {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.menu-btn.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.active span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 
