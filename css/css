@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #e5eaf0;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #123c69;
+}
+
+.logo span {
+    color: #2474c6;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #172033;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #2474c6;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+
+    padding: 80px 10%;
+
+    background: linear-gradient(
+        135deg,
+        #eef5ff,
+        #ffffff
+    );
+}
+
+.hero-text {
+    max-width: 650px;
+}
+
+.pequeno-texto {
+    color: #2474c6;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #2474c6;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #40546d;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    max-width: 600px;
+    font-size: 18px;
+    color: #59687a;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.principal {
+    background: #123c69;
+    color: white;
+}
+
+.principal:hover {
+    background: #2474c6;
+    transform: translateY(-3px);
+}
+
+.secundario {
+    border: 2px solid #123c69;
+    color: #123c69;
+}
+
+.secundario:hover {
+    background: #123c69;
+    color: white;
+}
+
+
+/* CARD DO HERO */
+
+.hero-card {
+    width: 330px;
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 50px rgba(18, 60, 105, 0.15);
+
+    transition: 0.3s;
+}
+
+.hero-card:hover {
+    transform: translateY(-8px);
+}
+
+.icone {
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+
+.hero-card h3 {
+    color: #123c69;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section {
+    padding: 100px 10%;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titulo-secao p {
+    color: #2474c6;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.titulo-secao h2 {
+    font-size: 40px;
+    color: #123c69;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre {
+    background: white;
+}
+
+.sobre-conteudo {
+    max-width: 850px;
+    margin: auto;
+}
+
+.sobre-texto h3 {
+    font-size: 25px;
+    color: #123c69;
+    margin: 25px 0 10px;
+}
+
+.sobre-texto p {
+    color: #59687a;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   PROJETOS
+========================= */
+
+.projetos-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.projeto {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #e3e8ee;
+
+    transition: 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.projeto-icone {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.projeto h3 {
+    color: #123c69;
+    margin-bottom: 10px;
+}
+
+.projeto p {
+    color: #59687a;
+    margin-bottom: 15px;
+}
+
+.projeto span {
+    color: #2474c6;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   HABILIDADES
+========================= */
+
+.habilidades {
+    background: white;
+}
+
+.habilidades-container {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.habilidade {
+    padding: 15px 25px;
+
+    border-radius: 30px;
+
+    background: #eef5ff;
+
+    color: #123c69;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contato {
+    text-align: center;
+}
+
+.contato > p {
+    color: #59687a;
+    font-size: 18px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background: #123c69;
+
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        padding-top: 60px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .botoes {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .projetos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
